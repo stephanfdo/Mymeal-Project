@@ -1,129 +1,187 @@
-<style type=text/css> .header {
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/mymeal3.jpg);}
-</style>
-
-<?php ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="{{ asset('img/MYMEAL_favicon.svg') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>MYMEAL</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/news.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cont.css') }}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap" rel="stylesheet">
-    </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('css/styles-home.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"rel="stylesheet"/>
+  <title>Home</title>
+</head>
 <body>
-    <section class="header")>
-        <nav>
-            <a href="index.php"><img src="/img/MYMEAL.png"> </a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="about-us.php">ABOUT US</a></li>
-                    <li><a href="services.php">SERVICES</a></li>
-                    <li><a href="contact.php">CONTACT</a></li>
-                    <li><a href="contact.php">Login  <i class="fas fa-user 2x"></i></a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+
+  <header>
+    <a href="index.html" class="brand"><img src="/img/MYMEAL.png" width="250" ></a>
+    <div class="menu-btn"></div>
+
+    <div class="navigation">
+      <div class="navigation-items">
+
+            <a href="index.html">Home</a>
+            <a href="./common/AboutUs.html">About Us</a>
+            <a href="./common/contact.php">Contact Us</a>
+            <a href="./common/login.html">Login</a>
+            <a href="./common/signup.php">Sign-up</a>
+      </div>
+    </div>
+  </header>
+
+<section class="home">
+  <video class="video-slide active" src="./videos/mealV1.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/.mp4" autoplay muted loop></video>
 
 
-        <div class="text-box">
-        <h1>Make it simple. But significant</h1>
-        <p>End hunger, achieve food security and improved nutrition and promote sustainable agriculture</p>
-        <a href="#content" class="visit-btn">Visit us</a>
-        </div>
-    </section>
-<body>
-<section class="content" id="content">
+  <div class="content active">
+    <h1>Welcome<br> <span></span> </br></h1>
+    <p>"" </p>
+    <a href="./common/AboutUs.html">Read More</a>
+  </div>
+  <div class="content">
+    <h1>Donate<br> <span></span> </br></h1>
+    <p>...........</p>
+    <a href="./common/AboutUs.html">Read More</a>
+ </div>
+ <div class="content">
+    <h1>N<br> <span>....</span> </br></h1>
+    <p>“...............'</p>
+    <a href="./common/AboutUs.html">Read More</a>
+ </div>
 
+
+
+  <div class="media-icons">
+    <a href="https://www.facebook.com/Zero2Hero.lk/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+    <a href="https://www.instagram.com/zero2hero.lk/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+    <a href="https://twitter.com/Zero2Hero_lk" target="_blank"> <i class="fab fa-twitter"></i> </a>
+  </div>
+
+  <div class="slider-navigation">
+    <div class="nav-btn active"></div>
+    <div class="nav-btn"></div>
+    <div class="nav-btn"></div>
+
+</div>
 
 </section>
-</body>
-</html>
 
+<!--Footer-->
+<footer  class="text-center text-lg-start bg-dark text-muted" style="background-color:  #00b300;">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<a><button class="btn btn-primary scroll-top" data-scroll="up" type="button">
-<i class="fa fa-chevron-up"></i>
-</button></a>
-<style>
-	.scroll-top {
-	border-radius: 5px;
-	background-color: darkorange;
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 25px;
-    right: 20px;
-    display: none;
-  	border: none;
-  	color: white;
-  	padding: 10px 10px;
-  	text-align: center;
-  	font-size: 16px;
-	}
-	.scroll-top:hover{
-		background-color: red;
-	}
-</style>
+  <!-- Section: Links  -->
+  <section class="footer" style="background-color:  #00b300;">>
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="./img/zlogo.png" width="150" >
+          </h6>
+        </div>
 
-<script>
-	$(document).ready(function() {
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: white;">
+            Useful links
+          </h6>
+          <p style="color: white;">
+            <a href="common/aboutus.html" class="text-reset" style="color: white;"> about us </a>
+          </p>
+          <p style="color: white;">
+            <a href="common/contact.php" class="text-reset" style="color: white;">contact us</a>
+          </p>
+          <p style="color: white;">
+            <a href="common/login.html" class="text-reset" style="color: white;">login</a>
+          </p>
+          <p style="color: white;">
+            <a href="common/signup.php" class="text-reset" style="color: white;">sign up</a>
+          </p>
+        </div>
+        <!-- Grid column -->
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.scroll-top').fadeIn();
-    } else {
-      $('.scroll-top').fadeOut();
-    }
-  });
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="color: white;">
+            Contact
+          </h6>
+          <p style="color: white;"><i class="fas fa-home me-3"></i><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sri Lanka</p>
+          <p style="color: white;">
+            <i class="fas fa-envelope me-3"></i>
+            @outlook.com
+          </p>
+          <p style="color: white;"><i class="fas fa-phone me-3"></i>+94</p>
 
-  $('.scroll-top').click(function() {
-    $("html, body").animate({
-      scrollTop: 0
-    }, 100);
-    return false;
-  });
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
 
-});
-</script>
-
-<footer>
-	<p>Copyright © 2021 MYMEAL | Powered by Greenvibes Technologies</p>
-  <ul>
-    <li><a href="https://fb.com/greenvibeslk"><i class="fab fa-facebook-f"></i></a></li>
-    <li><a href="https://twitter.com/greenvibeslk"><i class="fab fa-twitter"></i></a></li>
-    <li><a href="https://www.instagram.com/greenvibeslk/"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://api.whatsapp.com/send/?phone=%2B94768623177&text&app_absent=0"><i class="fab fa-whatsapp"></i></a></li>
-    <li><a href="tel:+94765341551"><i class="fa fa-phone"></i></a></li>
-  </ul>
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color:  #00b300; color: white;">>
+     &copy; 2022 Copyright:
+    <a class="text-reset fw-bold" href="##">GreenVibes.lk</a>
+  </div>
+  <!-- Copyright -->
 </footer>
 
 
-  <!-- responsive -->
-<script>
-    var navLinks = document.getElementById("navLinks");
 
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
+
+<script type="text/javascript">
+//Javascript of responsive navigation menu
+
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+
+menuBtn.addEventListener("click", () =>{
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+} );
+
+//Javascript of video slider navigation
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".content");
+
+var sliderNav =  function(manual){
+  btns.forEach((btn) => {
+        btn.classList.remove("active");
+    });
+
+  slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+  contents.forEach((content) => {
+        content.classList.remove("active");
+    });
+
+
+   btns[manual].classList.add("active");
+   slides[manual].classList.add("active");
+   contents[manual].classList.add("active");
+ }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+    });
+   });
 </script>
 
+<!--MD-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
 
 
-</section>
 </body>
 </html>
