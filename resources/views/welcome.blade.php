@@ -54,9 +54,10 @@
 
 
   <div class="media-icons">
-    <a href="https://www.facebook.com/Zero2Hero.lk/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
-    <a href="https://www.instagram.com/zero2hero.lk/" target="_blank"> <i class="fab fa-instagram"></i> </a>
-    <a href="https://twitter.com/Zero2Hero_lk" target="_blank"> <i class="fab fa-twitter"></i> </a>
+    <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+    <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+    <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i> </a>
+    <a href="https://twitter.com/" target="_blank"> <i class="fab fa-whatsapp"></i> </a>
   </div>
 
   <div class="slider-navigation">
@@ -80,7 +81,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <img src="./img/zlogo.png" width="150" >
+            <img src="/img/MYMEAL.png" width="150" >
           </h6>
         </div>
 
