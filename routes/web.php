@@ -24,3 +24,8 @@ Route::get('/login', function () {
 Route::get('/singup', function () {
     return view('singup');
 });
+
+
+Route::get('/user', function () {
+    return view('user');
+});

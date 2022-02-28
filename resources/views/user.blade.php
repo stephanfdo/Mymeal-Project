@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Stellar Admin</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="css1/simple-line-icons.css">
-    <link rel="stylesheet" href="css1/flag-icon.min.css">
-    <link rel="stylesheet" href="css1/vendor.bundle.base.css">
+    <link rel="stylesheet" href="{{ asset('css1/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css1/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css1/vendor.bundle.base.css') }}">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="./css1/daterangepicker.css">
-    <link rel="stylesheet" href="./css1/chartist.min.css">
+    <link rel="stylesheet" href="{{ asset('css1/daterangepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('css1/chartist.min.css') }}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="./css1/userstyle.css">
+    <link rel="stylesheet" href="{{ asset('css1/userstyle.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="./images/favicon.png" />
   </head>
@@ -32,7 +32,7 @@
 
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-         <img style="height:70px;" src="images/MYMEAL.png" alt="logo" class="logo-dark" />
+         <img style="height:70px;" src="img/MYMEAL.png" alt="logo" class="logo-dark" />
           <ul class="navbar-nav navbar-nav-right ml-auto">
       <li></li>
 
@@ -134,20 +134,20 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="js1/vendor.bundle.base.js"></script>
+    <script src="{{ asset('js1/vendor.bundle.base.js') }}"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="./js1/Chart.min.js"></script>
-    <script src="./js1/moment.min.js"></script>
-    <script src="./js1/daterangepicker.js"></script>
-    <script src="./js1/chartist.min.js"></script>
+    <script src="{{ asset('js1/Chart.min.js') }}"></script>
+    <script src="{{ asset('js1/moment.min.js') }}"></script>
+    <script src="{{ asset('js1/daterangepicker.js') }}"></script>
+    <script src="{{ asset('js1/chartist.min.js') }}"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="js1/off-canvas.js"></script>
-    <script src="js1/misc.js"></script>
+    <script src="{{ asset('js1/off-canvas.js') }}"></script>
+    <script src="{{ asset('js1/misc.js') }}"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="./js1/dashboard.js"></script>
+    <script src="{{ asset('js1/dashboard.js') }}"></script>
     <!-- End custom js for this page -->
   </body>
 </html>
