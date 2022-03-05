@@ -30,9 +30,9 @@
   </header>
 
 <section class="home">
-  <video class="video-slide active" src="./videos/mealV1.mp4" autoplay muted loop></video>
-  <video class="video-slide" src="./videos/.mp4" autoplay muted loop></video>
-  <video class="video-slide" src="./videos/.mp4" autoplay muted loop></video>
+  <video class="video-slide active" src="./videos/homevideo2.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/homevideo3.mp4" autoplay muted loop></video>
+  <video class="video-slide" src="./videos/homevideo4.mp4" autoplay muted loop></video>
 
 
   <div class="content active">

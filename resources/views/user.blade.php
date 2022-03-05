@@ -50,9 +50,9 @@
                 <img class="img-xs rounded-circle ml-2" src="images/faces/.jpg" alt="Profile image"> <span class="font-weight-normal">  </span></a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
-                  <img class="img-md rounded-circle" src="images/faces/face8.jpg" alt="Profile image">
+                  <img class="img-md rounded-circle" src="images" alt="Profile image">
                   <p class="mb-1 mt-3"></p>
-                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  <p class="font-weight-light text-muted mb-0">mail</p>
                 </div>
                 <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
                 <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-primary"></i> Messages</a>
@@ -79,8 +79,8 @@
                   <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Allen Moreno</p>
-                  <p class="designation">Administrator</p>
+                  <p class="profile-name">name</p>
+
                 </div>
                 <div class="icon-container">
                   <i class="icon-bubbles"></i>
@@ -92,7 +92,7 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">
                 <div class="nav-item nav-category">
-              <span class="nav-link">Dashboard</span>
+              <span class="nav-link">Opernage</span>
             </div>
               </a>
 
@@ -101,7 +101,7 @@
 
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <div class="nav-item nav-category"><span class="nav-link">UI Elements</span></div>
+                <div class="nav-item nav-category"><span class="nav-link">My donations</span></div>
                 <i class="icon-layers menu-icon"></i>
               </a>
             </li>
@@ -111,7 +111,7 @@
 
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <div class="nav-item nav-category"><span class="nav-link">Sample Pages</span></div>
+                <div class="nav-item nav-category"><span class="nav-link">Map</span></div>
                 <i class="icon-doc menu-icon"></i>
               </a>
               <div class="collapse" id="auth">
