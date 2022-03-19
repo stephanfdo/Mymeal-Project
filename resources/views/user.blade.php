@@ -129,7 +129,27 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
+        <div class="main">
 
+  <!-- Actual search box -->
+  <div class="form-group has-search">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+
+  <!-- Another variation with a button -->
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search by city">
+    <div class="input-group-append">
+      <button class="btn btn-secondary" type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+
+
+</div>
       <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
