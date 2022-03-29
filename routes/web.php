@@ -29,3 +29,8 @@ Route::get('/singup', function () {
 Route::get('/user', function () {
     return view('user');
 });
+
+
+Route::get('/admin', function () {
+    return view('admin');
+});
