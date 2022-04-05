@@ -34,3 +34,6 @@ Route::get('/user', function () {
 Route::get('/admin', function () {
     return view('admin');
 });
+
+
+Route::post('/addinformation','App\Http\Controllers\datacontroller@addinformation');

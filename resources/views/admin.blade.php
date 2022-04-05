@@ -89,28 +89,38 @@
 
 
 
-        <form method="POST" action="/addtask">
+        <form method="POST" action="/addinformation">
                   {{csrf_field()}}
 
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping"></span>
-  <input type="text" class="form-control" placeholder="Name of the children's home" aria-label="Username" aria-describedby="addon-wrapping"  name="task">
+  <input type="text" class="form-control" placeholder="Name of the children's home" aria-label="Username" aria-describedby="addon-wrapping"  name="childrenhome">
 </div>
 <br>
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping"></span>
-  <input type="text" class="form-control" placeholder="City" aria-label="" aria-describedby="addon-wrapping"  name="task">
+  <input type="text" class="form-control" placeholder="City" aria-label="" aria-describedby="addon-wrapping"  name="city">
 </div>
 <br>
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping"></span>
-  <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="addon-wrapping"  name="task">
+  <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="addon-wrapping"  name="address">
 </div>
 <br>
 
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping"></span>
-  <input type="text" class="form-control" placeholder="Telephone No" aria-label="Username" aria-describedby="addon-wrapping"  name="task">
+  <input type="text" class="form-control" placeholder="Telephone No" aria-label="Username" aria-describedby="addon-wrapping"  name="teleno">
+</div>
+<br>
+<div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping"></span>
+  <input type="text" class="form-control" placeholder="Telephone No 2" aria-label="Username" aria-describedby="addon-wrapping"  name="teleno1">
+</div>
+<br>
+<div class="input-group flex-nowrap">
+  <span class="input-group-file" id="addon-wrapping"></span>
+  <input type="text" class="form-control" placeholder="Picture" aria-label="Username" aria-describedby="addon-wrapping"  name="picture">
 </div>
 <br><br>
 <center>
