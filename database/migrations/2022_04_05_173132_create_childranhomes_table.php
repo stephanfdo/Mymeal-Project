@@ -14,6 +14,7 @@ class CreateChildranhomesTable extends Migration
     public function up()
     {
         Schema::create('childranhomes', function (Blueprint $table) {
+            $table->increments('chid');
             $table->text('name');
             $table->string('city');
             $table->text('address');

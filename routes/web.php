@@ -27,7 +27,8 @@ Route::get('/singup', function () {
 
 
 Route::get('/user', function () {
-    return view('user');
+    $data=App\Models\childranhome::all();
+    return view('user')->with('data',$data);
 });
 
 

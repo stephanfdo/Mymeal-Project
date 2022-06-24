@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Stellar Admin</title>
     <!-- plugins:css -->
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css1/simple-line-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css1/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css1/vendor.bundle.base.css') }}">
@@ -20,6 +25,105 @@
     <link rel="stylesheet" href="{{ asset('css1/userstyle.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="./images/favicon.png" />
+
+    <style type="text/css">
+
+
+
+      .card{
+      width:50%;
+      background-color: #0a3d62;
+      color: #fff;
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14),
+      0 1px 18px 0 rgba(0,0,0,0.12),
+      0 3px 5px -1px rgba(0,0,0,0.3);
+      }
+      .card-body{
+      padding: 0px;
+      min-height: 0px;
+      }
+      .card-title,p{
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      }
+      .card-text{
+      font-size: 10px;
+      font-style: italic;
+      padding-bottom: 10px;
+      }
+      ul{
+      list-style-type: none;
+      padding: 20px;
+      }
+      li{
+      font-weight: 500;
+      padding-bottom: 5px;
+      }
+      li span{
+      font-weight: 300;
+      padding-left: 5px;
+      }
+      .bg-custom{
+      background-color:#0c2461;
+      }
+      .bg-custom p{
+      padding: 10px;
+      line-height: 1;
+      }
+      .col-4{
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      }
+      .bg-effects{
+      background-color: #1B1464;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      padding-left: 10px;
+      padding-top: 10px;
+      }
+      @media(max-width: 992px){
+      .card{
+      width: 70%;
+      }
+      }
+      @media(max-width: 768px){
+      .card{
+      width: 70%;
+      }
+      .container{
+      max-width: 100%;
+      }
+      img{
+      display: flex;
+      }
+      }
+      @media(max-width: 615px){
+      li{
+      font-size: 12px;
+      }
+      .card{
+      width: 90%;
+      }
+      }
+
+
+
+
+
+<style>
+.card mb-3 img{
+height:30px;
+width: 30px;
+
+}
+
+
+</style>
+
+
+
+
   </head>
   <body>
     <div class="container-scroller">
@@ -146,6 +250,56 @@
       </button>
     </div>
   </div>
+<br><br><br>
+@foreach($data as $chdata)
+
+  <div class="card mb-3" style="display: flex ;">
+  <div>
+  <img class="card-img-top" style="width:100px; height:100px; float:left; padding:10px;"  src="{{ asset($chdata->file_path) }}" alt="Card image cap">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{$chdata->name}}</h5>
+    <p class="card-text"><i class="material-icons">place</i>{{$chdata->city}}</p>
+    <p class="card-text"><i class="material-icons">place</i>{{$chdata->address}}</p>
+    <p class="card-text"><i class="material-icons">phone</i>{{$chdata->tpno1}}</p>
+    <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i>{{$chdata->tpno}}</p>
+  </div>
+</div>
+
+@endforeach
+
+
+@foreach($data as $chdata)
+
+<div class="container mt-5" style="width: 140%;">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <div class="bg-effects">
+              <h2 class="card-title">{{$chdata->name}}</h2>
+              <p class="card-text">Bussiness Consultant</p>
+            </div>
+            <ul>
+              <li><i class="material-icons">place</i>{{$chdata->city}}</li>
+              <li>Professional :-<span>Consultant</span></li>
+              <li>Country :-<span>United Kingdom</span></li>
+              <li>Phone :-<span>+012 3654 789</span></li>
+              <li>Emails :-<span>Jone.dee@mail.com</span></li>
+            </ul>
+          </div>
+          <div class="col-4 pl-0">
+            <img src="men.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      <div class="bg-custom">
+        <p>Visit Now :-<span> W3hubs.com</span></p>
+      </div>
+    </div>
+
+@endforeach
+
 
 
 

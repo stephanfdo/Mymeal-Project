@@ -19,6 +19,15 @@ class datacontroller extends Controller
         $form->tpno1=$request->teleno1;
         $form->file_path=$request->picture;
         $form->save();
+        return redirect()->back();
+
+
+        $data=childranhome::all();
+        //dd($data);
+       // return redirect()->back();
+
+       return view('user')->with('data',$data);
+
 
 
     }

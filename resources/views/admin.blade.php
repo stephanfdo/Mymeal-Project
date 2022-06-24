@@ -120,7 +120,7 @@
 <br>
 <div class="input-group flex-nowrap">
   <span class="input-group-file" id="addon-wrapping"></span>
-  <input type="text" class="form-control" placeholder="Picture" aria-label="Username" aria-describedby="addon-wrapping"  name="picture">
+  <input type="file" class="form-control" placeholder="Picture" aria-label="Username" aria-describedby="addon-wrapping"  name="picture">
 </div>
 <br><br>
 <center>
