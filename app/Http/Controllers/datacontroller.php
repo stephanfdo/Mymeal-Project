@@ -31,4 +31,21 @@ class datacontroller extends Controller
 
 
     }
+
+
+
+    public function searchCity()
+    {
+            $search_text=$_POST['city'];
+            $search =childranhome::where('city','LIKE','%'.$search_text.'%')->get();
+            if(count($search)>0){
+            return view('search')->with('search',$search);
+            }
+            else{
+                return view('search')->withMessage('No Details found. Try to search again !');
+            }
+    }
+
+
+
 }

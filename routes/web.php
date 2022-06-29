@@ -29,6 +29,7 @@ Route::get('/singup', function () {
 Route::get('/user', function () {
     $data=App\Models\childranhome::all();
     return view('user')->with('data',$data);
+
 });
 
 
@@ -38,3 +39,6 @@ Route::get('/admin', function () {
 
 
 Route::post('/addinformation','App\Http\Controllers\datacontroller@addinformation');
+
+
+Route::post('/search','App\Http\Controllers\datacontroller@searchCity');

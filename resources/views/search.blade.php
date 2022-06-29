@@ -238,7 +238,7 @@ width: 30px;
   <div class="input-group">
     <input type="text" class="form-control" name="city" placeholder="Search by city">
     <div class="input-group-append">
-      <button class="btn btn-secondary" type="submit">
+      <button class="btn btn-secondary" type="button">
         <i class="fa fa-search"></i>
       </button>
     </div>
@@ -252,7 +252,7 @@ width: 30px;
 
 
 <br><br><br>
-@foreach($data as $chdata)
+@foreach($search as $chdata)
 
   <div class="card mb-3" style="display: flex; width:80%;">
   <div>
@@ -271,6 +271,9 @@ width: 30px;
 
 
 <br> <br> <br>
+
+
+
 
 
 
