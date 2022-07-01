@@ -233,12 +233,12 @@ width: 30px;
 
   <!-- Another variation with a button -->
 
-<form action="{{url('/search')}}" method="post">
+  <form action="" >
 {{csrf_field()}}
   <div class="input-group">
-    <input type="text" class="form-control" name="city" placeholder="Search by city">
+    <input type="text" class="form-control" name="city" required="required" value="" placeholder="Search by city">
     <div class="input-group-append">
-      <button class="btn btn-secondary" type="button">
+      <button class="btn btn-secondary" type="submit">
         <i class="fa fa-search"></i>
       </button>
     </div>
@@ -271,10 +271,6 @@ width: 30px;
 
 
 <br> <br> <br>
-
-
-
-
 
 
 </div>

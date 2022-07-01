@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\childranhome;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class datacontroller extends Controller
 {
@@ -22,11 +23,7 @@ class datacontroller extends Controller
         return redirect()->back();
 
 
-        $data=childranhome::all();
-        //dd($data);
-       // return redirect()->back();
 
-       return view('user')->with('data',$data);
 
 
 
@@ -34,17 +31,27 @@ class datacontroller extends Controller
 
 
 
-    public function searchCity()
+    public function searchCity(request $request)
     {
-            $search_text=$_POST['city'];
-            $search =childranhome::where('city','LIKE','%'.$search_text.'%')->get();
-            if(count($search)>0){
-            return view('search')->with('search',$search);
+            $search_text=$request['city']?? "";
+            if($search_text!=""){
+                $search=childranhome::where('city','LIKE','%'.$search_text.'%')->get();
             }
             else{
-                return view('search')->withMessage('No Details found. Try to search again !');
+                $search=childranhome::all();
             }
+            $data=compact('search', 'search_text');
+
+            return view('user')->with($data);
+
+                //dd($data);
+               // return redirect()->back();
+
+
+
+
     }
+
 
 
 
