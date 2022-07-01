@@ -40,9 +40,12 @@ class datacontroller extends Controller
             else{
                 $search=childranhome::all();
             }
+            
             $data=compact('search', 'search_text');
 
+
             return view('user')->with($data);
+
 
                 //dd($data);
                // return redirect()->back();
