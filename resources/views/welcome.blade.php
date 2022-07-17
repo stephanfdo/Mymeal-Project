@@ -23,8 +23,8 @@
             <a href="index.html">Home</a>
             <a href="./common/AboutUs.html">About Us</a>
             <a href="./common/contact.php">Contact Us</a>
-            <a href="./common/login.html">Login</a>
-            <a href="./common/signup.php">Sign-up</a>
+            <a href="/login">Login</a>
+            <a href="/singup">Sign-up</a>
       </div>
     </div>
   </header>

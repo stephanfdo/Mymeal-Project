@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\childranhome;
+use App\Models\users;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use \Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class datacontroller extends Controller
 {
@@ -40,7 +43,7 @@ class datacontroller extends Controller
             else{
                 $search=childranhome::all();
             }
-            
+
             $data=compact('search', 'search_text');
 
 
@@ -56,6 +59,49 @@ class datacontroller extends Controller
     }
 
 
+    public function userdata(Request $request){
+
+
+       try{
+
+
+        $form=new users();
+        $form->name=$request->uname;
+        $form->email=$request->email;
+        $form->password=$request->password;
+
+        $form->save();
+        return redirect()->back()->with('message', 'Successfully registered please login!');
+       }catch(QueryException $e){
+        return redirect()->back()->with('message', 'Invalid SingUp, The email already used!');
+       }
+        }
+
+
+
+
+public function loginvalidate(Request $request){
+    $form=users::find($request->email);
+    if($form==null){
+        return redirect()->back()->with('message', 'Invalid null login!');
+    }
+
+ else if ($form->password==$request->password){
+    return view('user');
+}
+else{
+    return redirect()->back()->with('message', 'Invalid login!');
+}
+
 
 
 }
+
+
+
+
+
+
+
+}
+

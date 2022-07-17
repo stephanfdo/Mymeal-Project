@@ -246,7 +246,9 @@ width: 30px;
 </form>
 
 
-
+<form action="/viewall">
+    <button type="submit" > View All</button>
+</form>
 
 
 

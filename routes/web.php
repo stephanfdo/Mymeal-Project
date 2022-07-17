@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\datacontroller;
+use App\Models\childranhome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,10 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('/viewall', function () {
+    $search=childranhome::all();
+    return view('user')->with('search',$search);
+});
 
 Route::post('/addinformation','App\Http\Controllers\datacontroller@addinformation');
 
@@ -40,4 +45,8 @@ Route::post('/search','App\Http\Controllers\datacontroller@searchCity');
 Route::get('/users','App\Http\Controllers\datacontroller@searchCity');
 
 Route::get('/user', [datacontroller::class, 'searchCity']);
+
+Route::post('/signupdata','App\Http\Controllers\datacontroller@userdata');
+
+Route::post('/loginValidate','App\Http\Controllers\datacontroller@loginvalidate');
 
