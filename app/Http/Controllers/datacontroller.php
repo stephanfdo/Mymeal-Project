@@ -81,13 +81,16 @@ class datacontroller extends Controller
 
 
 public function loginvalidate(Request $request){
-    $form=users::find($request->email);
+
+    $form = users::where('email', request('email'))->first();
+    $name=$form->name;
+
     if($form==null){
-        return redirect()->back()->with('message', 'Invalid null login!');
+        return redirect()->back()->with('message', 'Invalid login!');
     }
 
  else if ($form->password==$request->password){
-    return view('user');
+    return redirect(route('user.view',$name));
 }
 else{
     return redirect()->back()->with('message', 'Invalid login!');

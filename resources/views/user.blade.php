@@ -112,7 +112,7 @@
 
 
 
-<style>
+ <style>
 .card mb-3 img{
 height:30px;
 width: 30px;
@@ -232,6 +232,15 @@ width: 30px;
 
 
   <!-- Another variation with a button -->
+
+  @if(session()->has('message'))
+    <div class="alert alert-danger">
+        {{ session()->get('message') }}
+    </div>
+@endif
+
+
+
 
   <form action="" >
 {{csrf_field()}}

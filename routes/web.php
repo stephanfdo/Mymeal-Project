@@ -44,9 +44,10 @@ Route::post('/search','App\Http\Controllers\datacontroller@searchCity');
 
 Route::get('/users','App\Http\Controllers\datacontroller@searchCity');
 
-Route::get('/user', [datacontroller::class, 'searchCity']);
+Route::get('/user', [datacontroller::class, 'searchCity'])->name('user.view');
 
 Route::post('/signupdata','App\Http\Controllers\datacontroller@userdata');
 
 Route::post('/loginValidate','App\Http\Controllers\datacontroller@loginvalidate');
+
 
