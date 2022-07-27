@@ -112,7 +112,8 @@
 
 
 
- <style>
+
+
 .card mb-3 img{
 height:30px;
 width: 30px;
@@ -180,11 +181,11 @@ width: 30px;
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
                 <div class="profile-image">
-                  <img class="img-xs rounded-circle" src="images/faces/face8.jpg" alt="profile image">
+
                   <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">name</p>
+                  <p class="profile-name"> {{ session()->get('name'); }}</p>
 
                 </div>
                 <div class="icon-container">
@@ -233,11 +234,7 @@ width: 30px;
 
   <!-- Another variation with a button -->
 
-  @if(session()->has('message'))
-    <div class="alert alert-danger">
-        {{ session()->get('message') }}
-    </div>
-@endif
+
 
 
 

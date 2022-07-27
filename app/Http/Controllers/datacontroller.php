@@ -85,11 +85,15 @@ public function loginvalidate(Request $request){
     $form = users::where('email', request('email'))->first();
     $name=$form->name;
 
+
     if($form==null){
         return redirect()->back()->with('message', 'Invalid login!');
     }
 
  else if ($form->password==$request->password){
+    $request->session()->put('email', 'email');
+    $request->session()->put('name', $name);
+
     return redirect(route('user.view',$name));
 }
 else{

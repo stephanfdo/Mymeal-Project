@@ -34,7 +34,7 @@ Route::get('/admin', function () {
 
 Route::get('/viewall', function () {
     $search=childranhome::all();
-    return view('user')->with('search',$search);
+    return redirect(route('user.view',$search));
 });
 
 Route::post('/addinformation','App\Http\Controllers\datacontroller@addinformation');
