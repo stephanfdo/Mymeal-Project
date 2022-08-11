@@ -203,12 +203,10 @@ width: 30px;
 
 
             <li class="nav-item">
-
-              <a class="nav-link" data-toggle="collapse" type="submit" href="{{route('user.booking')}}" aria-expanded="false" aria-controls="ui-basic">
-                <div class="nav-item nav-category"><span class="nav-link">Donate</span></div>
+              <a class="nav-link" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="ui-basic">
+                <div class="nav-item nav-category"><span class="nav-link">donate</span></div>
                 <i class="icon-layers menu-icon"></i>
               </a>
-
             </li>
 
 
@@ -232,58 +230,67 @@ width: 30px;
 
 
   <!-- Another variation with a button -->
-
-  <h3 style="color:#39e600;">Verified Childrenhomes </h3>
+<h3 style="color:#39e600;">Book and save your donations</h3>
 
 <br><br>
 
+<form>
+
+<select class="form-control" name="product_id">
+    <option>Select Childrenhome</option>
+    @foreach ($values as $data)
+        <option value="{{ $data->chid }}" >
+            {{ $data->name }} , {{ $data->city }}
+        </option>
+    @endforeach
+</select>
+
+<br><br>
+<select class="form-control" name="product_id">
+    <option>Select donation type</option>
+
+        <option value="breakfest" >
+             Breakfest
+        </option>
+
+        <option value="lunch" >
+             Lunch
+        </option>
+        <option value="dinner" >
+             Dinner
+        </option>
+        <option value="other" >
+             Other
+        </option>
+
+</select>
 
 
 
-  <form action="" >
-{{csrf_field()}}
-  <div class="input-group">
-    <input type="text" class="form-control" name="city" required="required" value="" placeholder="Search by city">
-    <div class="input-group-append">
-      <button class="btn btn-secondary" type="submit">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
-  </div>
-</form>
 
-
-<form action="/viewall">
-    <button type="submit" > View All</button>
-</form>
-
-
-
-
-<br><br><br>
-@foreach($search as $chdata)
-
-  <div class="card mb-3" style="display: flex; width:80%;">
-  <div>
-  <img class="card-img-top" style="width:150px; height:150px; float:left; padding:10px;"  src="{{ asset($chdata->file_path) }}" alt="Card image cap">
-  </div>
-  <div class="card-body" >
-    <h5 class="card-title" style="color: white;">{{$chdata->name}}</h5>
-    <p class="card-text"><i class="material-icons">place</i>{{$chdata->city}}</p>
-    <p class="card-text"><i class="material-icons">place</i>{{$chdata->address}}</p>
-    <p class="card-text"><i class="material-icons">phone</i>{{$chdata->tpno1}}</p>
-    <p class="card-text"><i class="material-icons">phone</i>{{$chdata->tpno}}</p>
-  </div>
+<br><br>
+<div class="container" style="padding-left:8px ;">
+   <div class="row">
+      <div class='col-sm-6'>
+         <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+               <input type='date' class="form-control" />
+               <span class="input-group-addon">
+               <span class="glyphicon glyphicon-calendar"></span>
+               </span>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $(function () {
+             $('#datetimepicker1').datetimepicker();
+         });
+      </script>
+   </div>
 </div>
 
-@endforeach
-
-
-
-@if (count($search)==0)
-<h4 style="color:red;">Searching Result was not found</h4>
-@endif
-
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
 
 
 
@@ -294,6 +301,8 @@ width: 30px;
 </div>
       <!-- page-body-wrapper ends -->
     </div>
+
+
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="{{ asset('js1/vendor.bundle.base.js') }}"></script>

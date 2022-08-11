@@ -69,6 +69,54 @@
 
 </section>
 
+
+<form action="" >
+{{csrf_field()}}
+  <div class="input-group">
+    <input type="text" class="form-control" name="city" required="required" value="" placeholder="Search by city">
+    <div class="input-group-append">
+      <button class="btn btn-secondary" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+
+
+<form action="/viewall">
+    <button type="submit" > View All</button>
+</form>
+
+
+
+
+<br><br><br>
+@foreach($search as $chdata)
+
+  <div class="card mb-3" style="display: flex; width:80%;">
+  <div>
+  <img class="card-img-top" style="width:150px; height:150px; float:left; padding:10px;"  src="{{ asset($chdata->file_path) }}" alt="Card image cap">
+  </div>
+  <div class="card-body" >
+    <h5 class="card-title" style="color: white;">{{$chdata->name}}</h5>
+    <p class="card-text"><i class="material-icons">place</i>{{$chdata->city}}</p>
+    <p class="card-text"><i class="material-icons">place</i>{{$chdata->address}}</p>
+    <p class="card-text"><i class="material-icons">phone</i>{{$chdata->tpno1}}</p>
+    <p class="card-text"><i class="material-icons">phone</i>{{$chdata->tpno}}</p>
+  </div>
+</div>
+
+@endforeach
+
+
+
+@if (count($search)==0)
+<h4 style="color:red;">Searching Result was not found</h4>
+@endif
+
+
+
+
 <!--Footer-->
 <footer  class="text-center text-lg-start bg-dark text-muted" style="background-color:  #00b300;">
 

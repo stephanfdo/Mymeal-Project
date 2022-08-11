@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [datacontroller::class, 'searchwelcome'])->name('welcome.view');
 
 Route::get('/login', function () {
     return view('login');
@@ -51,3 +49,7 @@ Route::post('/signupdata','App\Http\Controllers\datacontroller@userdata');
 Route::post('/loginValidate','App\Http\Controllers\datacontroller@loginvalidate');
 
 
+Route::get('/userBook', function () {
+    $values=App\Models\childranhome::all();
+    return view('userBook')->with('values',$values);
+})->name('user.booking');

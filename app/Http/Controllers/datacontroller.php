@@ -84,6 +84,7 @@ public function loginvalidate(Request $request){
 
     $form = users::where('email', request('email'))->first();
     $name=$form->name;
+    $email=$form->email;
 
 
     if($form==null){
@@ -91,7 +92,7 @@ public function loginvalidate(Request $request){
     }
 
  else if ($form->password==$request->password){
-    $request->session()->put('email', 'email');
+    $request->session()->put('email', $email);
     $request->session()->put('name', $name);
 
     return redirect(route('user.view',$name));
@@ -103,6 +104,34 @@ else{
 
 
 }
+
+
+
+public function searchwelcome(request $request)
+    {
+            $search_text=$request['city']?? "";
+            if($search_text!=""){
+                $search=childranhome::where('city','LIKE','%'.$search_text.'%')->get();
+            }
+            else{
+                $search=childranhome::all();
+            }
+
+            $data=compact('search', 'search_text');
+
+
+            return view('welcome')->with($data);
+
+
+                //dd($data);
+               // return redirect()->back();
+
+
+
+
+    }
+
+
 
 
 
