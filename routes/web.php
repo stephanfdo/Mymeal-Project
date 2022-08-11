@@ -53,3 +53,6 @@ Route::get('/userBook', function () {
     $values=App\Models\childranhome::all();
     return view('userBook')->with('values',$values);
 })->name('user.booking');
+
+
+Route::post('/addbooking','App\Http\Controllers\datacontroller@addbooking');

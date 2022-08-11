@@ -203,24 +203,24 @@ width: 30px;
 
 
             <li class="nav-item">
-
-              <a class="nav-link" data-toggle="collapse" type="submit" href="{{route('user.booking')}}" aria-expanded="false" aria-controls="ui-basic">
-                <div class="nav-item nav-category"><span class="nav-link">Donate</span></div>
-                <i class="icon-layers menu-icon"></i>
+              <a class="nav-link" href="{{url('/userBook')}}">
+                <div class="nav-item nav-category">
+              <span class="nav-link">donate</span>
+            </div>
               </a>
 
             </li>
-
-
-
 
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="admin" aria-expanded="false" aria-controls="auth">
-                <div class="nav-item nav-category"><span class="nav-link">My donations</span></div>
-                <i class="icon-doc menu-icon"></i>
+              <a class="nav-link" href="#">
+                <div class="nav-item nav-category">
+              <span class="nav-link">my donations</span>
+            </div>
               </a>
 
             </li>
+
+
 
           </ul>
         </nav>

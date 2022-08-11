@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\booking;
+use App\Models\bookings;
 use App\Models\childranhome;
 use App\Models\users;
 use Illuminate\Database\QueryException;
@@ -133,6 +135,24 @@ public function searchwelcome(request $request)
 
 
 
+
+
+    public function addbooking(Request $request){
+
+        $form=new booking();
+        $form->chid=$request->chid;
+        $form->dtype=$request->dtype;
+        $form->date=$request->date;
+
+        $form->save();
+        return redirect()->back()->with('message', 'Successfully saved!');
+
+
+
+
+
+
+    }
 
 
 

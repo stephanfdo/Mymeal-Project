@@ -193,7 +193,7 @@ width: 30px;
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{url('/user')}}">
                 <div class="nav-item nav-category">
               <span class="nav-link">Childrenhomes</span>
             </div>
@@ -203,22 +203,23 @@ width: 30px;
 
 
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="ui-basic">
-                <div class="nav-item nav-category"><span class="nav-link">donate</span></div>
-                <i class="icon-layers menu-icon"></i>
+              <a class="nav-link" href="{{url('/userBook')}}">
+                <div class="nav-item nav-category">
+              <span class="nav-link">donate</span>
+            </div>
               </a>
+
             </li>
-
-
-
 
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="admin" aria-expanded="false" aria-controls="auth">
-                <div class="nav-item nav-category"><span class="nav-link">My donations</span></div>
-                <i class="icon-doc menu-icon"></i>
+              <a class="nav-link" href="#">
+                <div class="nav-item nav-category">
+              <span class="nav-link">my donations</span>
+            </div>
               </a>
 
             </li>
+
 
           </ul>
         </nav>
@@ -227,16 +228,21 @@ width: 30px;
         <div class="main">
 
   <!-- Actual search box -->
-
+  @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
 
   <!-- Another variation with a button -->
 <h3 style="color:#39e600;">Book and save your donations</h3>
 
 <br><br>
 
-<form>
+<form method="POST" action="/addbooking">
+{{csrf_field()}}
 
-<select class="form-control" name="product_id">
+<select class="form-control" name="chid">
     <option>Select Childrenhome</option>
     @foreach ($values as $data)
         <option value="{{ $data->chid }}" >
@@ -246,7 +252,7 @@ width: 30px;
 </select>
 
 <br><br>
-<select class="form-control" name="product_id">
+<select class="form-control" name="dtype">
     <option>Select donation type</option>
 
         <option value="breakfest" >
@@ -274,7 +280,7 @@ width: 30px;
       <div class='col-sm-6'>
          <div class="form-group">
             <div class='input-group date' id='datetimepicker1'>
-               <input type='date' class="form-control" />
+               <input type='date' class="form-control" name="date" />
                <span class="input-group-addon">
                <span class="glyphicon glyphicon-calendar"></span>
                </span>
@@ -289,7 +295,7 @@ width: 30px;
    </div>
 </div>
 
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
 
 
