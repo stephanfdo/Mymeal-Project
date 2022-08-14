@@ -6,6 +6,7 @@ use App\Models\booking;
 use App\Models\bookings;
 use App\Models\childranhome;
 use App\Models\users;
+use Exception;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -75,7 +76,7 @@ class datacontroller extends Controller
         $form->save();
         return redirect()->back()->with('message', 'Successfully registered please login!');
        }catch(QueryException $e){
-        return redirect()->back()->with('message', 'Invalid SingUp, The email already used!');
+        return redirect()->back()->with('message1', 'Invalid SingUp, The email already used!');
        }
         }
 
@@ -85,13 +86,21 @@ class datacontroller extends Controller
 public function loginvalidate(Request $request){
 
     $form = users::where('email', request('email'))->first();
+
+    try{
     $name=$form->name;
     $email=$form->email;
+    }
+    catch(Exception $e){
+        return redirect()->back()->with('message', 'Invalid login! email not registered');
+    }
 
 
     if($form==null){
         return redirect()->back()->with('message', 'Invalid login!');
     }
+
+
 
  else if ($form->password==$request->password){
     $request->session()->put('email', $email);
@@ -138,12 +147,12 @@ public function searchwelcome(request $request)
 
 
     public function addbooking(Request $request){
-
+$email=session()->get('email');
         $form=new booking();
         $form->chid=$request->chid;
         $form->dtype=$request->dtype;
         $form->date=$request->date;
-
+        $form->email=$email;
         $form->save();
         return redirect()->back()->with('message', 'Successfully saved!');
 

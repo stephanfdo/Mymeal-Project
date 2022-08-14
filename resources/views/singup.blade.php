@@ -56,6 +56,12 @@
     </div>
 @endif
 
+@if(session()->has('message1'))
+    <div class="alert alert-danger">
+        {{ session()->get('message1') }}
+    </div>
+@endif
+
 
 
 	<div class="d-flex justify-content-center h-100" style="margin-top:-130px;">

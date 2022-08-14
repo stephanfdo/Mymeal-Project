@@ -18,9 +18,10 @@ class Bookings extends Migration
 
         Schema::create('bookings', function (Blueprint $table) {
 
-            $table->string('chid');
+            $table->integer('chid');
             $table->string('dtype');
             $table->date('date');
+            $table->string('email');
             $table->timestamps();
         });
     }
