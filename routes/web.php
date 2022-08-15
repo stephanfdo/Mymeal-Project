@@ -56,3 +56,10 @@ Route::get('/userBook', function () {
 
 
 Route::post('/addbooking','App\Http\Controllers\datacontroller@addbooking');
+
+Route::get('/userView', function () {
+    //$email=session()->get('email');
+    $data=App\Models\booking::with('childranhomes')->first();
+    return view('userBookingView')->with($data);
+});
+

@@ -212,7 +212,7 @@ width: 30px;
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{url('/userView')}}">
                 <div class="nav-item nav-category">
               <span class="nav-link">my donations</span>
             </div>

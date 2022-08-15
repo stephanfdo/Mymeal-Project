@@ -239,64 +239,29 @@ width: 30px;
 
 <br><br>
 
-<form method="POST" action="/addbooking">
-{{csrf_field()}}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Childrenhome</th>
+      <th scope="col">Donation type</th>
+      <th scope="col">Date</th>
+      <th scope="col">City</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($data as $view)
+    <tr>
+      <th scope="row">{{$view->name}}</th>
+      <td>{{$view->dtype}}</td>
+      <td>{{$view->date}}</td>
+      <td>{{$view->city}}</td>
+    </tr>
 
-<select class="form-control" name="chid">
-    <option>Select Childrenhome</option>
-    @foreach ($values as $data)
-        <option value="{{ $data->chid }}" >
-            {{ $data->name }} , {{ $data->city }}
-        </option>
-    @endforeach
-</select>
-
-<br><br>
-<select class="form-control" name="dtype">
-    <option>Select donation type</option>
-
-        <option value="breakfest" >
-             Breakfest
-        </option>
-
-        <option value="lunch" >
-             Lunch
-        </option>
-        <option value="dinner" >
-             Dinner
-        </option>
-        <option value="other" >
-             Other
-        </option>
-
-</select>
+@endforeach
+  </tbody>
+</table>
 
 
-
-
-<br><br>
-<div class="container" style="padding-left:8px ;">
-   <div class="row">
-      <div class='col-sm-6'>
-         <div class="form-group">
-            <div class='input-group date' id='datetimepicker1'>
-               <input type='date' class="form-control" name="date" />
-               <span class="input-group-addon">
-               <span class="glyphicon glyphicon-calendar"></span>
-               </span>
-            </div>
-         </div>
-      </div>
-      <script type="text/javascript">
-         $(function () {
-             $('#datetimepicker1').datetimepicker();
-         });
-      </script>
-   </div>
-</div>
-
-  <button type="submit" class="btn btn-primary">Save</button>
-</form>
 
 
 

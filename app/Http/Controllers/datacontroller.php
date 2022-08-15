@@ -163,7 +163,11 @@ $email=session()->get('email');
 
     }
 
-
+public function viewBooking(){
+    $email=session()->get('email');
+    $data=bookings::where('email','LIKE','%'.$email.'%')->get();
+    return view('userBookingView')->with($data);
+}
 
 
 
