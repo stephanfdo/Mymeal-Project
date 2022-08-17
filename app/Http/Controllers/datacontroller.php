@@ -166,7 +166,9 @@ $email=session()->get('email');
 public function viewBooking(){
     $email=session()->get('email');
     $data=bookings::where('email','LIKE','%'.$email.'%')->get();
-    return view('userBookingView')->with($data);
+    //$id=$data->chid;
+    $datach = bookings::with('childranhome')->get();
+    return view('userBookingView')->with('dbook',$data)->with('dch',$datach);
 }
 
 

@@ -249,15 +249,19 @@ width: 30px;
     </tr>
   </thead>
   <tbody>
-  @foreach($data as $view)
+  @foreach($dch as $view)
+
     <tr>
       <th scope="row">{{$view->name}}</th>
-      <td>{{$view->dtype}}</td>
-      <td>{{$view->date}}</td>
       <td>{{$view->city}}</td>
+      @endforeach
+      @foreach($dbook as $view)
+      <td>{{$view->date}}</td>
+      <td>{{$view->dtype}}</td>
     </tr>
 
 @endforeach
+
   </tbody>
 </table>
 
