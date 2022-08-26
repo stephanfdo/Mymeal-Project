@@ -1,5 +1,5 @@
 <style type=text/css> .header {
-    height: 100px;
+
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(img/hungry.jpg);
 
 }
@@ -44,7 +44,7 @@
 
     </head>
 <body>
-    <section class="header" style="height: 30px;">
+    <section class="header">
         <nav>
             <a href="index.php"><img src="/img/MYMEAL.png"> </a>
             <div class="nav-links" id="navLinks">

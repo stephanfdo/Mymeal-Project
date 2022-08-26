@@ -20,7 +20,7 @@
     <div class="navigation">
       <div class="navigation-items">
 
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="./common/AboutUs.html">About Us</a>
             <a href="./common/contact.php">Contact Us</a>
             <a href="/login">Login</a>
@@ -69,6 +69,7 @@
 
 </section>
 
+<section class="#search">
 
 <form action="" >
 {{csrf_field()}}
@@ -115,7 +116,7 @@
 @endif
 
 
-
+</section>
 
 <!--Footer-->
 <footer  class="text-center text-lg-start bg-dark text-muted" style="background-color:  #00b300;">
