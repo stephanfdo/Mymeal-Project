@@ -60,3 +60,7 @@ Route::post('/addbooking','App\Http\Controllers\datacontroller@addbooking');
 
 
 Route::get('/userView','App\Http\Controllers\datacontroller@viewBooking');
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});

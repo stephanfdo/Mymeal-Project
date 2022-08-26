@@ -254,8 +254,7 @@ width: 30px;
     <tr>
       <th scope="row">{{$view->name}}</th>
       <td>{{$view->city}}</td>
-      @endforeach
-      @foreach($dbook as $view)
+     
       <td>{{$view->date}}</td>
       <td>{{$view->dtype}}</td>
     </tr>

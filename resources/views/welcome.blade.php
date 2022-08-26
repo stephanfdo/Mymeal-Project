@@ -37,17 +37,17 @@
 
   <div class="content active">
     <h1>Welcome<br> <span></span> </br></h1>
-    <p>"" </p>
+    <p>"End hunger, achieve food security and improved nutrition and promote sustainable agriculture" </p>
     <a href="./common/AboutUs.html">Read More</a>
   </div>
   <div class="content">
     <h1>Donate<br> <span></span> </br></h1>
-    <p>...........</p>
+    <p>"Donate to verified childrenhomes, By their contacts"</p>
     <a href="./common/AboutUs.html">Read More</a>
  </div>
  <div class="content">
-    <h1>N<br> <span>....</span> </br></h1>
-    <p>“...............'</p>
+    <h1>End hunger<br> <span>jjj</span> </br></h1>
+    <p>“Let us end hunger"</p>
     <a href="./common/AboutUs.html">Read More</a>
  </div>
 

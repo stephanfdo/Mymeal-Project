@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class childranhome extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+
+    public function bookings()
+    {
+        return $this->belongsTo(bookings::class);
+    }
+
+
+
 }
