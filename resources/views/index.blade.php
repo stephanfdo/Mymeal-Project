@@ -21,7 +21,7 @@
       <div class="navigation-items">
 
             <a href="/">Home</a>
-            <a href="./common/AboutUs.html">About Us</a>
+            <a href="/aboutus">About Us</a>
             <a href="./common/contact.php">Contact Us</a>
             <a href="/login">Login</a>
             <a href="/singup">Sign-up</a>

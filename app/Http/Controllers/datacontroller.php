@@ -131,7 +131,7 @@ public function searchwelcome(request $request)
             $data=compact('search', 'search_text');
 
 
-            return view('welcome')->with($data);
+            return view('index')->with($data);
 
 
                 //dd($data);
